@@ -1,0 +1,24 @@
+He seguido sobretodo lo de AVega
+He metido fn_name, fn_declaration
+Mirar: funcion: fn_declaration sentencias TOK_LLAVEDERECHA
+está en línea 257, cuál hacemos para R22??ç
+Mirar:
+R50,R51, que lo hace con una función directamente
+R52 con lo de fin_while
+R54 línea 514
+R56
+R61
+72-88
+comparacion línea 765, 94-98
+línea  919, entonces hay que cambiar lo de programa:
+
+
+Nuevo:
+idpf : TOK_IDENTIFICADOR línea 340
+if_exp línea 475
+if_exp_sentencias línea 485
+while línea 498
+while_exp línea 504
+call_func línea 727
+expf línea 747
+R104, necesario el sprintf?
