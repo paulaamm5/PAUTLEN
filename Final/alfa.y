@@ -17,7 +17,14 @@
 	int clase_actual;
 
 	int longitud;
-	int tamanio_vector_actual
+	int tamanio_vector_actual;
+	
+	int es_funcion;
+	num_variables_locales_actual=0;
+   	pos_variable_local_actual=1;   /*cambiar a 0 alomejor*/
+    	num_parametros_actual = 0;
+    	pos_parametro_actual = 0;
+    	control_retorno=0
 
 
 	int control_retorno
