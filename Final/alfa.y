@@ -20,6 +20,8 @@
 	int tamanio_vector_actual
 
 
+	int control_retorno
+
 	TablaHash tablaGlobal = NULL;
 	TablaHash tablaLocal = NULL;
 	tablaSimbolosAmbitos tabla;	/* Tabla de simbolos*/
@@ -235,9 +237,10 @@ fn_name : TOK_FUNCTION tipo TOK_IDENTIFICADOR {
 
     DeclararFuncion($3.nombre, &inserta);
     num_variables_locales_actual=0;
-    pos_variable_local_actual=1;
+    pos_variable_local_actual=1;   /*cambiar a 0 alomejor*/
     num_parametros_actual = 0;
     pos_parametro_actual = 0;
+    control_retorno=0
 };
 
 
@@ -257,7 +260,7 @@ fn_declaration : fn_name TOK_PARENTESISIZQUIERDO parametros_funcion TOK_PARENTES
 /*REGLA PR 22*/
 /*
 funcion: fn_declaration sentencias TOK_LLAVEDERECHA {
-  if(!hay_return) {
+  if(control_retorno==0) {
     fprintf(ERR_OUT, "****Error semantico en lin %ld: Funcion %s sin sentencia de retorno.\n", linea, $1.nombre);
     return -1;
   }
